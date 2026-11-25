@@ -1,0 +1,18 @@
+[package]
+name = "csv-to-json"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+license = "MIT"
+description = "Convert UTF-8 CSV data to compact JSON arrays or objects"
+
+[dependencies]
+csv = "1.4"
+memchr = "2"
+mimalloc = "0.1"
+serde = "1"
+serde_json = "1"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
